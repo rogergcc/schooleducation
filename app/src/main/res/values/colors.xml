@@ -38,4 +38,10 @@
     <color name="white">#FFFFFF</color>
     <!--<color name="colorRipple">#1F000000</color>-->
     <color name="colorRipple">#376DF6</color>
+
+    <!--gradients side_nav -->
+    <color name="sideNavcenterColor">#009688</color>
+    <color name="sideNavendColor">#00695C</color>
+    <color name="sideNavstartColor">#4DB6AC</color>
+
 </resources>

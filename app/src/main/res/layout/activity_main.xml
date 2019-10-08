@@ -15,10 +15,16 @@
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
+        android:background="@color/contentBodyColor"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
+        app:itemTextColor="@color/bottom_nav_color"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
+
+        app:itemIconTint="@color/bottom_nav_color"
+
+
         app:headerLayout="@layout/nav_header_main"
         app:menu="@menu/activity_main_drawer" />
 
