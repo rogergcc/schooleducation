@@ -1,0 +1,30 @@
+<resources>
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="CardViewStyle" parent="Base.CardView">
+
+        <!--<item name="android:foreground">@drawable/ripple_custom</item>-->
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:foreground">?selectableItemBackground</item>
+        <item name="cardCornerRadius">@dimen/card_corner_radius</item>
+        <item name="cardElevation">@dimen/card_elevation</item>
+        <item name="cardPreventCornerOverlap">true</item>
+        <!--<item name="cardUseCompatPadding">true</item>-->
+
+
+    </style>
+
+    <style name="BottomNavigation">
+        <item name="android:foreground">@drawable/selector_bg_card</item>
+        <item name="android:background">@color/bottomNavigationBackground</item>
+        <!--<item name="itemBackground">@drawable/ripple_custom</item>-->
+        <item name="itemIconTint">@color/bottom_nav_color</item>
+        <item name="itemTextColor">@color/bottom_nav_color</item>
+
+    </style>
+</resources>
