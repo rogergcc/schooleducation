@@ -4,7 +4,7 @@
     <color name="colorPrimaryDark">#2A2E43</color>
     <color name="colorAccent">#FF402D</color>
     <color name="bottomNavigationTextColor">#B2B2B2</color>
-    <color name="bottomNavigationTintColor">#B2B2B2</color>
+    <color name="bottomNavigationTintColor">#6F6A6A</color>
     <color name="bottomNavigationSelectedColor">#FC4926</color>
     <color name="statusBarColor">#000</color>
     <color name="whiteBodyColor">#FCFCFC</color>
@@ -37,11 +37,14 @@
 
     <color name="white">#FFFFFF</color>
     <!--<color name="colorRipple">#1F000000</color>-->
-    <color name="colorRipple">#376DF6</color>
+    <color name="colorRipple">#1f000000</color>
 
     <!--gradients side_nav -->
     <color name="sideNavcenterColor">#009688</color>
     <color name="sideNavendColor">#00695C</color>
     <color name="sideNavstartColor">#4DB6AC</color>
+
+    <!--<color name="ripple_material_dark">#33ffffff</color>-->
+    <!--<color name="ripple_material_light">#1f000000</color>`-->
 
 </resources>

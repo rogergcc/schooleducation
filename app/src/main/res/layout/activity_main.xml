@@ -18,11 +18,11 @@
         android:background="@color/contentBodyColor"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        app:itemTextColor="@color/bottom_nav_color"
+        app:itemTextColor="@color/miniTitleColor"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
 
-        app:itemIconTint="@color/bottom_nav_color"
+        app:itemIconTint="@color/bottomNavigationTintColor"
 
 
         app:headerLayout="@layout/nav_header_main"

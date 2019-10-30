@@ -3,8 +3,8 @@
     <!--colors for dark mode-->
     <color name="contentBodyColor">#000</color>
     <color name="contentTextColor">#fff</color>
-    <color name="bottomNavigationBackground">#000</color>
+    <color name="bottomNavigationBackground">#333A40</color>
     <color name="miniTitleColor">#fff</color>
 
-    <color name="colorRipple">#F2FFFFFF</color>
+    <color name="colorRipple">#33ffffff</color>
 </resources>
