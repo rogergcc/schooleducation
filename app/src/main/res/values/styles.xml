@@ -7,6 +7,9 @@
         <item name="colorPrimaryDark">@color/colorAccent</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="colorControlHighlight">@color/colorRipple</item>
+
+        <item name="android:textColorSecondary">@color/colorSecondary</item>
+        <!--<item name="android:listDivider">@android:color/transparent</item>-->
     </style>
 
     <style name="AppTheme.NoActionBar">
@@ -95,8 +98,17 @@
         <item name="itemIconTint">@color/bottom_nav_color</item>
         <item name="itemTextColor">@color/bottom_nav_color</item>
 
-
+        <item name="android:fontFamily">@font/source_sans_pro</item>
     </style>
 
 
+
+
+    <style name="RobotoTextViewStyle" parent="android:Widget.TextView">
+        <item name="android:fontFamily">@font/lato</item>
+    </style>
+
+    <style name="NavigationTheme" parent="AppTheme">
+        <item name="listPreferredItemHeightSmall">55dp</item><!-- menu item height- vary as u need -->
+    </style>
 </resources>

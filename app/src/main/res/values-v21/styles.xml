@@ -25,6 +25,6 @@
         <!--<item name="itemBackground">@drawable/ripple_custom</item>-->
         <item name="itemIconTint">@color/bottom_nav_color</item>
         <item name="itemTextColor">@color/bottom_nav_color</item>
-
+        <item name="android:fontFamily">@font/source_sans_pro</item>
     </style>
 </resources>

@@ -15,17 +15,89 @@
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
-        android:background="@color/contentBodyColor"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        app:itemTextColor="@color/miniTitleColor"
         android:layout_gravity="start"
+        android:background="@color/bottomNavigationBackground"
         android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header_main"
 
         app:itemIconTint="@color/bottomNavigationTintColor"
+        app:itemTextAppearance="@style/RobotoTextViewStyle"
+
+        app:itemTextColor="@color/miniTitleColor"
+        app:menu="@menu/activity_main_drawer"
+
+        android:theme="@style/NavigationTheme"
+
+        >
+
+        <include layout="@layout/nav_header_main" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/nav_header_height"
+            android:background="?android:attr/listDivider" />
 
 
-        app:headerLayout="@layout/nav_header_main"
-        app:menu="@menu/activity_main_drawer" />
+        <LinearLayout
+
+            android:id="@+id/lineartoggle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            android:layout_gravity="bottom"
+
+            android:background="@color/bottomNavigationBackground"
+
+
+            android:orientation="vertical"
+
+            android:paddingBottom="@dimen/fab_margin">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="center_vertical"
+                android:background="?android:attr/listDivider"
+
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/fab_margin"
+                android:paddingTop="@dimen/fab_margin">
+
+                <ImageView
+
+                    android:id="@+id/company_image_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+
+                    android:src="@drawable/ic_lightbulb_outline_black_24dp" />
+
+                <TextView
+                    android:id="@+id/txtCompanyName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/fab_margin"
+                    android:fontFamily="@font/lato"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/fab_margin"
+                    android:text="Toogle Theme"
+                    android:textColor="@color/contentTextColor"
+
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </com.google.android.material.navigation.NavigationView>
+
 
 </androidx.drawerlayout.widget.DrawerLayout>

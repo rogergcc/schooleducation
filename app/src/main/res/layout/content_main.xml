@@ -38,6 +38,7 @@
 
             <!--anterior-->
             <!--style="@style/CardViewStyle"-->
+            <!--los bordes en android 4 funcionan ok-->
             <androidx.cardview.widget.CardView
 
                 android:layout_width="match_parent"
@@ -45,6 +46,8 @@
                 android:foreground="?selectableItemBackground"
 
                 android:layout_marginTop="10dp"
+
+                style="@style/CardViewStyle"
 
                >
 
@@ -123,6 +126,8 @@
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="15dp"
                 app:cardPreventCornerOverlap="true"
+                style="@style/CardViewStyle"
+
                 android:layout_marginTop="10dp">
 
                 <net.colindodd.gradientlayout.GradientRelativeLayout
@@ -158,6 +163,8 @@
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="15dp"
                 app:cardPreventCornerOverlap="true"
+                style="@style/CardViewStyle"
+
                 android:layout_marginTop="10dp">
 
                 <net.colindodd.gradientlayout.GradientRelativeLayout
@@ -192,6 +199,8 @@
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="15dp"
                 app:cardPreventCornerOverlap="true"
+                style="@style/CardViewStyle"
+
                 android:layout_marginTop="10dp">
 
                 <net.colindodd.gradientlayout.GradientRelativeLayout
@@ -226,6 +235,8 @@
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="15dp"
                 app:cardPreventCornerOverlap="true"
+                style="@style/CardViewStyle"
+
                 android:layout_marginTop="10dp">
 
                 <net.colindodd.gradientlayout.GradientRelativeLayout

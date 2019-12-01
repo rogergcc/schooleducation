@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
 
     tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single">
         <item
+
             android:id="@+id/nav_account"
             android:icon="@drawable/ic_person_outline_black_24dp"
             android:title="Perfil" />
@@ -35,5 +37,33 @@
                 android:title="Toggle Theme" />
         </menu>
     </item>
+
+
+    <item android:title="">
+        <menu>
+            <item
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="as" />
+            <item
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="w" />
+            <item
+
+                android:title="" />
+
+        </menu>
+    </item>
+
+    <!--<group-->
+        <!--android:checkableBehavior="single"-->
+        <!--android:id="@+id/nav_footer">-->
+
+        <!--&lt;!&ndash;app:actionLayout="@layout/footer_navigation_menu"&ndash;&gt;-->
+        <!--<item-->
+            <!--android:id="@+id/nav_log_version"-->
+
+            <!--android:title="Configuracion" />-->
+    <!--</group>-->
+
 
 </menu>
