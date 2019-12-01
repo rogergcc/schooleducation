@@ -29,7 +29,8 @@
         app:menu="@menu/activity_main_drawer"
 
         android:theme="@style/NavigationTheme"
-
+        android:scrollbars="vertical"
+        android:isScrollContainer="true"
         >
 
         <include layout="@layout/nav_header_main" />
@@ -38,7 +39,7 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginTop="@dimen/nav_header_height"
-            android:background="?android:attr/listDivider" />
+            android:background="@color/colordivider" />
 
 
         <LinearLayout
@@ -61,7 +62,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_gravity="center_vertical"
-                android:background="?android:attr/listDivider"
+                android:background="@color/colordivider"
 
                 />
 

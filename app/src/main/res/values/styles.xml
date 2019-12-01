@@ -10,6 +10,9 @@
 
         <item name="android:textColorSecondary">@color/colorSecondary</item>
         <!--<item name="android:listDivider">@android:color/transparent</item>-->
+        <!--<item name="android:listDivider">?android:attr/listDivider</item>-->
+        <item name="android:listDivider">@color/colordivider</item>
+
     </style>
 
     <style name="AppTheme.NoActionBar">
