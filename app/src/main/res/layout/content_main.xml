@@ -7,14 +7,28 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.appsnipp.schooleducation.MainActivity"
     tools:showIn="@layout/app_bar_main"
-    style="@style/parent.contentLayout">
+    style="@style/parent.contentLayout"
+
+  android:padding="0dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
 
     <androidx.core.widget.NestedScrollView
+
+
+
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        >
 
         <LinearLayout
             android:layout_width="match_parent"
+
+            android:paddingLeft="@dimen/normalPadding"
+            android:paddingRight="@dimen/normalPadding"
+
             android:layout_height="wrap_content"
             android:orientation="vertical">
 

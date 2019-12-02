@@ -12,7 +12,7 @@
     <color name="colortNavTextLight">#747374</color>
 
     <color name="bottomNavigationSelectedColor">#FC4926</color>
-    <color name="statusBarColor">#000</color>
+    <color name="statusBarColor">#33ffffff</color>
     <color name="whiteBodyColor">#FCFCFC</color>
     <color name="darkTextColor">#020000</color>
     <color name="primaryTextColor">#019AE8</color>

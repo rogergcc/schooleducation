@@ -1,13 +1,18 @@
 package com.appsnipp.schooleducation;
 
+import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.appcompat.app.AppCompatDelegate;
+
+import com.google.android.material.internal.NavigationMenuView;
 import com.google.android.material.navigation.NavigationView;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -23,7 +28,7 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private BottomNavigationView bottomNavigationView;
-
+    NavigationView navigationView;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -66,8 +71,9 @@ public class MainActivity extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+         navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
 
         bottomNavigationView = findViewById(R.id.navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
@@ -94,7 +100,9 @@ public class MainActivity extends AppCompatActivity
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
+
         // Handle navigation view item clicks here.
+        ((NavigationMenuView)navigationView.getChildAt(0)).smoothScrollToPosition(0);
         int id = item.getItemId();
 
         if (id == R.id.nav_account) {
@@ -129,19 +137,61 @@ public class MainActivity extends AppCompatActivity
         if(new DarkModePrefManager(this).isNightMode()){
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
             changeStatusBar(0,window);
+            //setLightStatusBar()
+            //clearLightStatusBar(window);
         }else{
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
             changeStatusBar(1,window);
         }
     }
+
+    public void clearLightStatusBar( Window window) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+
+//            window.setStatusBarColor(ContextCompat
+//                    .getColor(R.color.colorPrimaryDark));
+//
+            //window.setStatusBarColor(this.getResources().getColor(R.color.colorPrimaryDark));
+
+            window.setStatusBarColor(ContextCompat
+                    .getColor(MainActivity.this,R.color.colorPrimaryDark));
+        }
+    }
+
+    public static void setLightStatusBar(View view, Window window){
+
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+
+            int flags = view.getSystemUiVisibility();
+            flags |= View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
+            view.setSystemUiVisibility(flags);
+            window.setStatusBarColor(Color.WHITE);
+        }
+    }
+
     public void changeStatusBar(int mode, Window window){
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            //window.setStatusBarColor(this.getResources().getColor(R.color.contentBodyColor));
+            //window.setStatusBarColor(Color.TRANSPARENT);
+        }
+
         if(Build.VERSION.SDK_INT>= Build.VERSION_CODES.M){
-            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-            window.setStatusBarColor(this.getResources().getColor(R.color.contentBodyColor));
+            //window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+
+            int systemUiVisibilityFlags = window.getDecorView().getSystemUiVisibility();
+            systemUiVisibilityFlags &= ~View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
+            window.getDecorView().setSystemUiVisibility(systemUiVisibilityFlags);
+
             //white mode
             if(mode==1){
                 window.getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
+//                window.setStatusBarColor(Color.WHITE);
+            }else {
+                window.setStatusBarColor(ContextCompat
+                        .getColor(MainActivity.this,R.color.statusBarColor));
             }
+
         }
     }
 }

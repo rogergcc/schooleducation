@@ -10,15 +10,15 @@
 
             android:id="@+id/nav_account"
             android:icon="@drawable/ic_person_outline_black_24dp"
-            android:title="Perfil" />
+            android:title="@string/menu_perfil" />
         <item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="Gallery" />
+            android:title="@string/menu_galeria" />
         <item
             android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
+            android:icon="@drawable/ic_bookmark_border_black_24dp"
+            android:title="@string/menu_marker" />
         <item
             android:id="@+id/nav_manage"
             android:icon="@drawable/ic_menu_manage"
@@ -30,29 +30,30 @@
             <item
                 android:id="@+id/nav_share"
                 android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
+                android:title="@string/menu_share" />
             <item
                 android:id="@+id/nav_dark_mode"
                 android:icon="@android:drawable/ic_menu_day"
-                android:title="Toggle Theme" />
+                android:title="@string/menu_toggle" />
         </menu>
     </item>
 
 
-    <item android:title="">
-        <menu>
+    <group  android:id="@+id/qtw"
+        android:checkableBehavior="single">
+
             <item
-                android:icon="@drawable/ic_menu_gallery"
-                android:title="as" />
+                android:icon="@drawable/ic_settings_black_24dp"
+                android:title="@string/menu_settings" />
             <item
-                android:icon="@drawable/ic_menu_gallery"
-                android:title="w" />
+                android:icon="@drawable/ic_exit_to_app_24px"
+                android:title="@string/menu_cerrar" />
             <item
 
                 android:title="" />
 
-        </menu>
-    </item>
+
+    </group>
 
     <!--<group-->
         <!--android:checkableBehavior="single"-->
