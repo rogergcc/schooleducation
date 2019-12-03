@@ -20,4 +20,6 @@
     <color name="colordivider">@color/secondary_text_disabled_material_dark</color>
 
     <color name="statusBarColor">#1f000000</color>
+
+    <color name="colortBackgroundFragment">#272628</color>
 </resources>

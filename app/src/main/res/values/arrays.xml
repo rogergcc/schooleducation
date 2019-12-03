@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="entradas_categoria">
+        <item>Ludopatas</item>
+        <item>Gts</item>
+        <item>Mistery</item>
+        <item>Atm</item>
+        <item>Linktekphone</item>
+
+    </string-array>
+
+</resources>

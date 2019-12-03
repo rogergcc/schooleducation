@@ -1,33 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.appsnipp.schooleducation.MainActivity">
+    tools:context="com.appsnipp.schooleducation.MainActivity"
+    android:orientation="vertical">
 
     <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
-        >
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
         <androidx.appcompat.widget.Toolbar
 
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/contentBodyColor"
+
+
+
+            android:background="@color/colorPrimaryDark"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
 
             app:layout_scrollFlags="scroll|enterAlways"
-            app:titleTextColor="@color/contentTextColor"
-            app:title="Dashboard"
+
+
             />
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <include layout="@layout/content_main" />
+   <!--<include-->
 
+       <!--app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"-->
+
+       <!--layout="@layout/content_main"-->
+       <!--android:layout_height="match_parent"-->
+       <!--android:layout_width="match_parent" />-->
+    <FrameLayout
+        android:id="@+id/container"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
     <!--android:background="?android:attr/windowBackground"-->
     <!--android:foreground="?android:attr/selectableItemBackground"-->
 
@@ -54,9 +74,11 @@
         <!--app:itemBackground="@color/bottomNavigationBackground"/>-->
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
+
         android:id="@+id/navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+
         android:layout_gravity="bottom"
 
         android:clickable="true"

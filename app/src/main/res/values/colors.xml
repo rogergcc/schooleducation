@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#FCFCFC</color>
-    <color name="colorPrimaryDark">#2A2E43</color>
+    <color name="colorPrimary">#484848</color>
+    <color name="colorPrimaryDark">#323232</color>
     <color name="colorAccent">#FF402D</color>
     <color name="bottomNavigationTextColor">#B2B2B2</color>
 
@@ -9,6 +9,7 @@
     <color name="bottomNavigationTintColor">#6F6A6A</color>
 
     <color name="colortNavTextDark">#C3C4C7</color>
+    <color name="colortBackgroundFragment">#EFEDEF</color>
     <color name="colortNavTextLight">#747374</color>
 
     <color name="bottomNavigationSelectedColor">#FC4926</color>
@@ -54,6 +55,7 @@
     <color name="sideNavcenterColor">#009688</color>
     <color name="sideNavendColor">#00695C</color>
     <color name="sideNavstartColor">#4DB6AC</color>
+    <color name="background_footer_item_grid_categorias">#30000000</color>
 
     <!--<color name="ripple_material_dark">#33ffffff</color>-->
     <!--<color name="ripple_material_light">#1f000000</color>`-->

@@ -3,8 +3,8 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorRipple</item>
-        <item name="colorPrimaryDark">@color/contentBodyColor</item>
+        <item name="colorPrimary">@color/contentTextColor</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="colorControlHighlight">@color/colorRipple</item>
 
@@ -13,6 +13,9 @@
         <!--<item name="android:listDivider">?android:attr/listDivider</item>-->
         <item name="android:listDivider">@color/colordivider</item>
 
+
+        <!--sin toolbar-->
+        <!--<item name="android:windowFullscreen">true</item>-->
     </style>
 
     <style name="AppTheme.NoActionBar">

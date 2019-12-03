@@ -7,6 +7,8 @@
 
         <!--<item name="android:windowLightStatusBar" tools:targetApi="m">true</item>-->
 
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
     </style>
 
     <style name="CardViewStyle" parent="Base.CardView">
