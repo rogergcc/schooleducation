@@ -1,5 +1,6 @@
 package com.appsnipp.schooleducation;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
@@ -8,6 +9,9 @@ import androidx.annotation.NonNull;
 
 import com.appsnipp.schooleducation.fragments.DashboardFragment;
 import com.appsnipp.schooleducation.fragments.FragmentoCategorias;
+import com.appsnipp.schooleducation.utils.Utils;
+import com.google.android.material.bottomnavigation.BottomNavigationItemView;
+import com.google.android.material.bottomnavigation.BottomNavigationMenuView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.core.content.ContextCompat;
@@ -23,9 +27,11 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -122,6 +128,9 @@ public class MainActivity extends AppCompatActivity
 //
 //
 //        }
+
+
+        Utils.showBadge(this, bottomNavigationView, R.id.navigationMyProfile, "5");
 
     }
 

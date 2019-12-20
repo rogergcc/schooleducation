@@ -117,4 +117,6 @@
     <style name="NavigationTheme" parent="AppTheme">
         <item name="listPreferredItemHeightSmall">55dp</item><!-- menu item height- vary as u need -->
     </style>
+
+
 </resources>

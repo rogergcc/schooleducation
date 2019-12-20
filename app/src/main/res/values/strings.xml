@@ -106,4 +106,16 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_bitmap">Bitmap</string>
+
+
+    <string name="str_circle_title">圆形图：</string>
+    <string name="str_combine_img">合并图：</string>
+    <string name="str_gaosimohu">高斯模糊:</string>
+    <string name="str_radius_low">Radius -</string>
+    <string name="str_radius_high">Radius +</string>
+    <string name="str_all_demos">Demos :</string>
+    <string name="str_bitmap_demo">Bitmap Demo</string>
+    <string name="str_view_finder_demo">View Finder Demo</string>
+
 </resources>
