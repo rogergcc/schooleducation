@@ -1,7 +1,10 @@
 package com.appsnipp.schooleducation.adapters;
 
+import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
 import android.content.Context;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +19,8 @@ import com.appsnipp.schooleducation.R;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static androidx.constraintlayout.widget.Constraints.TAG;
 
 
 /**
@@ -33,6 +38,8 @@ public class AdapterCategories extends RecyclerView.Adapter<AdapterCategories.Vi
     private String[] mSelectedPosition ;
     private Context context;
     private boolean isAnimated;
+    private boolean on_attach = true;
+    long DURATION_IN_FADE_ID = 400;
 
     interface EscuchaEventosClick {
         void onItemClick(ViewHolder holder, int posicion);
@@ -85,7 +92,36 @@ public class AdapterCategories extends RecyclerView.Adapter<AdapterCategories.Vi
 
     }
 
+    private void setAnimation(View itemView, int i) {
+        if (!on_attach) {
+            i = -1;
+        }
+        boolean isNotFirstItem = i == -1;
+        i++;
+        itemView.setAlpha(0.f);
+        AnimatorSet animatorSet = new AnimatorSet();
+        ObjectAnimator animator = ObjectAnimator.ofFloat(itemView, "alpha", 0.f, 0.5f, 1.0f);
+        ObjectAnimator.ofFloat(itemView, "alpha", 0.f).start();
+        animator.setStartDelay(isNotFirstItem ? DURATION_IN_FADE_ID / 2 : (i * DURATION_IN_FADE_ID / 3));
+        animator.setDuration(500);
+        animatorSet.play(animator);
+        animator.start();
+    }
 
+    @Override
+    public void onAttachedToRecyclerView(@NonNull RecyclerView recyclerView) {
+
+        recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int newState) {
+                Log.d(TAG, "onScrollStateChanged: Called " + newState);
+                on_attach = false;
+                super.onScrollStateChanged(recyclerView, newState);
+            }
+        });
+
+        super.onAttachedToRecyclerView(recyclerView);
+    }
 
     @Override
     public int getItemCount() {
@@ -149,7 +185,7 @@ public class AdapterCategories extends RecyclerView.Adapter<AdapterCategories.Vi
         //        .into(viewHolder.avatar);
         viewHolder.titulo.setText(itemActual);
 
-
+        setAnimation(viewHolder.itemView, i);
 //        Glide.with(viewHolder.imagen.getContext())
 //                .load(itemActual.getIdImagen())
 //                .into(viewHolder.imagen);

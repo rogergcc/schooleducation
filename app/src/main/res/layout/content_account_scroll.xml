@@ -8,9 +8,14 @@
     tools:context=".AccountScrollActivity"
     android:background="@color/contentBodyColor"
 
-    android:paddingTop="@dimen/activity_vertical_margin"
+
 
     tools:showIn="@layout/activity_account_scroll">
+    <LinearLayout
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
 
     <TextView
         android:textColor="@color/contentTextColor"
@@ -18,5 +23,5 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/text_margin"
         android:text="@string/large_text" />
-
+    </LinearLayout>
 </androidx.core.widget.NestedScrollView>
